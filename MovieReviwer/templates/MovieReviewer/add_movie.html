@@ -1,0 +1,51 @@
+{% extends 'MovieReviewer/header.html' %}
+
+{%block content%}
+<div class="container">
+    <div class="contact-form medium-padding120">
+
+        <form action="/submission/" class="contact-form validate-form" method="POST">
+            {% csrf_token %}
+            <div class="row">
+                <div class="col-lg-6 clo-md-6 col-sm-120 col-xs-12 wrap-input100 validate-input bg1">
+                    <input type="text" name="movie_name" class="input100" placeholder="Movie Name">
+                </div>
+
+                <div class="col-lg-6 clo-md-6 col-sm-120 col-xs-12 wrap-input100 bg1">
+                    <input type="text" name="movie_type" class="input100" placeholder="Movie Type">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-6 clo-md-6 col-sm-120 col-xs-12 wrap-input100 validate-input bg1">
+                    <input type="text" name="movie_review" class="input100" placeholder="Movie Review">
+                </div>
+
+                <div class="col-lg-6 clo-md-6 col-sm-120 col-xs-12 wrap-input100 validate-input bg1">
+                    <input type="text" name="movie_release_date" class="input100" placeholder="Movie Release Date">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-6 clo-md-6 col-sm-120 col-xs-12 wrap-input100 validate-input bg1">
+                    <input type="text" name="movie_detail" class="input100" placeholder="Movie Details">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="submit-block table">
+                    <div class="col-lg-3 tabel-cell">
+                        <button class="btn btn-small btn-primary">
+                            <span class="text">Add Movie</span>
+                        </button>
+                    </div>
+                    <div class="col-lg-5 table-cell">
+
+                    </div>
+                </div>
+            </div>
+
+        </form>
+    </div>
+</div>
+{% endblock %}

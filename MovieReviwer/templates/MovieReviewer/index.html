@@ -1,0 +1,37 @@
+{% extends "MovieReviewer/header.html"%}
+
+{%block content%}
+<div class="container info-boxes pt100 pb100">
+    <p></p>
+    <h1>Movie List</h1>
+    <br>
+
+    <table class="table table-hover">
+        <thead>
+        <tr>
+            <th>Movie Name</th>
+            <th>Movie Type</th>
+            <th>Movie Review</th>
+            <th>Movie Release Date</th>
+            <th>Movie Details</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        {%for movie in Movies%}
+        <tr>
+            <td>{{movie.movie_name}}</td>
+            <td>{{movie.movie_type}}</td>
+            <td>{{movie.movie_review}}</td>
+            <td>{{movie.movie_release_date}}</td>
+            <td>{{movie.movie_detail}}</td>
+        </tr>
+        {%endfor%}
+
+        </tbody>
+    </table>
+
+</div>
+{%endblock%}
+
+
